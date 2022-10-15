@@ -1,0 +1,35 @@
+#:kivy 2.1.0
+<logoLayout>:
+    size_hint_y: 0.05
+    canvas.before:
+        Color:
+            rgba: 0.0, 0.17254901960784313, 0.4666666666666667, 1.0
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y: 'top'
+        BoxLayout:
+            size_hint: 0.2,1
+            orientation: 'horizontal'
+            Image:
+                source: 'supportFiles\FeYAlegria.png'
+            Image:
+                source: 'supportFiles\Flag_of_Venezuela.svg.png'
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y:'top'
+        Label:
+            size: self.size
+            text: 'Fe y Alegria - Interpretador'
+            bold: True
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y:'center'
+        Button:
+            size_hint: 0.2,1
+            text: 'Instrucciones'
+            bold: True
+            on_press: root.popInstruccions()
+
